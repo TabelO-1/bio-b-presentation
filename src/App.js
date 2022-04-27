@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './Header';
+import Footer from './Footer';
+import Home from './Home';
+import Audience from './Audience';
+import Genetics from './Genetics';
+import Research from './Research';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter as Router,
+  // Switch,
+  // Route
+} from "react-router-dom";
+import { Route, Switch } from "react-router";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/audience">
+              <Audience />
+            </Route>
+            <Route exact path="/genetics">
+              <Genetics />
+            </Route>
+            <Route exact path="/reccomend">
+              <Research />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </>
+    )
+  }
 }
 
 export default App;
