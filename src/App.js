@@ -6,13 +6,13 @@ import Home from './Home';
 import Audience from './Audience';
 import Genetics from './Genetics';
 import Research from './Research';
+import Sources from './Sources';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
-  // Switch,
-  // Route
+  Switch,
+  Route
 } from "react-router-dom";
-import { Route, Switch } from "react-router";
 
 class App extends React.Component {
   render() {
@@ -32,6 +32,9 @@ class App extends React.Component {
             </Route>
             <Route exact path="/reccomend">
               <Research />
+            </Route>
+            <Route exact path="/sources">
+              <Sources />
             </Route>
           </Switch>
           <Footer />

@@ -11,6 +11,7 @@ class Header extends React.Component {
         <NavItem><Link to="/audience" className="nav-link">Target Audience</Link></NavItem>
         <NavItem><Link to="/genetics" className="nav-link">Genetic Factors</Link></NavItem>
         <NavItem><Link to="/reccomend" className="nav-link">Research Reccomendations</Link></NavItem>
+        <NavItem><Link to="/sources" className="nav-link">Sources</Link></NavItem>
       </Navbar>
     )
   }
